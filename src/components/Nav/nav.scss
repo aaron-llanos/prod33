@@ -1,0 +1,38 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  padding: 3rem 6rem;
+  background: linear-gradient(0deg, rgba(229, 229, 229, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  color: white;
+  z-index: 3;
+}
+
+nav {
+  display: flex;
+  font-family: 'Archia';
+  font-weight: 200;
+  align-items: center;
+  width: 280px;
+  justify-content: space-between;
+
+  p {
+    font-size: 20px;
+  }
+}
+
+.social-logos.contact {
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+  text-align: center;
+
+  img {
+    margin-top: 2rem;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}

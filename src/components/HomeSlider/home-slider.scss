@@ -1,0 +1,148 @@
+.black-flash {
+  z-index: 0;
+  background: #000000;
+  opacity: 0;
+  animation: AnimationSlider 1s ease;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.overlay {
+  z-index: 0;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(229,229,229,0) 50%, rgba(0,0,0,0) 100%);
+}
+
+.nav-container {
+  z-index: 3;
+}
+
+@keyframes AnimationSlider {
+  50% {opacity: 1};
+}
+
+.home-slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 15%;
+  color: white;
+  position: relative;
+
+  &__info {
+    margin-bottom: -16rem;
+    margin-top: 12%;
+    padding: 4rem 6rem 0;
+    z-index: 1;
+
+    .progress {
+      letter-spacing: 2px;
+      font-size: 26px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-weight: 500;
+      font-size: 78px;
+      margin: 10px 0;
+    }
+
+    h3 {
+      font-weight: inherit;
+      font-size: 34px;
+    }
+
+    button {
+      color: white;
+      background-color: #d20000;
+      border-radius: 15px;
+      padding: 2px 32px;
+      font-weight: 100;
+      border: none;
+      margin-top: 20px;
+      font-size: 24px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-bottom: -9rem;
+    padding: 0 6rem;
+
+    .btn {
+      border: solid 1px white;
+      width: 122px;
+      height: 122px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 5px;
+      font-weight: 100;
+      // transition: ease-in 1s;
+      cursor: pointer;
+      animation: AnimationButton 5s ease;
+
+      p {
+        font-size: 20px;
+      }
+      .sign {
+        font-size: 22px;
+        margin-bottom: 3px;
+      }
+    }
+    .btn:first-of-type {
+      margin-bottom: 20px;
+    }
+
+    .btn.one {
+      position: relative;
+      // position: absolute;
+    }
+
+    .btn.two {
+      // position: absolute;
+    }
+  }
+
+  &__count {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+
+    p {
+      margin: 0 0.5rem;
+      font-size: 18px;
+    }
+
+    .line {
+      width: 300px;
+      height: 1px;
+      background-color: white;
+    }
+  }
+}
+
+.btn-animated.one {
+  position: absolute;
+  will-change: width, height;
+  width: 88%;
+}
+
+@keyframes AnimationButton {
+  50% {border: solid 2px white};
+}
